@@ -48,7 +48,7 @@ cd ethernet_simulator
 python -m pip install -r requirements.txt
 python demo.py
 python -m unittest discover -s tests -v
-streamlit run main.py
+python -m streamlit run main.py
 ```
 
 ## Simulation API and integration
