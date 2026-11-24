@@ -1,95 +1,38 @@
 # NSCOM03 - NSS Research Project
-# Ethernet Network Performance Simulator
 
-## Project background
+# Ethernet Traffic Imbalance Simulator
 
-**Research title:** *Comparative Analysis of Ethernet Network Performance at Different Link Speeds Using a Python-Based Interactive Simulator*
+Research: Performance Analysis of Traffic Imbalance in Aggregated Ethernet Links Using Discrete-Event Simulation.
 
-This Network Simulation Study (NSS) project examines how Ethernet link speed and offered traffic load affect network performance. The group is developing an interactive Python simulator to compare **10 Mbps (10BASE-T), 100 Mbps (100BASE-TX), and 1 Gbps (1000BASE-T)** links under controlled traffic conditions. The proposed experiments use offered payload traffic loads of **5, 50, 200, and 1,200 Mbps** and evaluate **payload throughput, average frame delay, frame loss, and link utilization**.
+This engine models two independent, one-direction transmission paths of full-duplex Ethernet links. It is not a complete IEEE 802.1AX implementation. It excludes dynamic redistribution, flow hashing, MAC learning, PAUSE, retransmissions, propagation and processing delays, collisions and physical errors. The original project's documented counters and observation/drain convention are retained; the original Python source was not available for direct patching.
 
-The simulator uses **SimPy** to model frame arrivals, FIFO queueing, transmission, and buffer-overflow drops; **Streamlit** provides the user interface, while **Pandas** and **Matplotlib** support results analysis and visualization. It is a simplified, full-duplex point-to-point Ethernet model intended for educational comparison, **not** a physical network measurement or a full Ethernet protocol emulator.
+## Setup
+Python 3.10+; from this directory:
 
-**This repository currently contains the core simulation engine**, which generates the records and aggregate counters needed by the performance metrics module and the Streamlit application. The immediate group goal is a working integrated code demonstration on **November 6, 2026**.
-
-## Project structure
-
-The repository currently contains the simulation engine and its supporting files:
-
-```text
-ethernet_simulator/
-├── simulation.py          # SimPy-based Ethernet simulation engine
-├── demo.py                # Standalone command-line demonstration
-├── requirements.txt       # Current Python dependency list
-├── README.md              # Project overview and setup instructions
-└── tests/
-    └── test_simulation.py # Automated simulation tests
-```
-
-As the project is integrated, the planned application structure is:
-
-```text
-ethernet_simulator/
-├── main.py                # Streamlit application (planned)
-├── simulation.py          # Ethernet simulation engine
-├── metrics.py             # Performance calculations (planned)
-├── visualization.py       # Graphs and plots (planned)
-├── demo.py                # Standalone simulation demonstration
-├── requirements.txt       # Python dependencies
-├── README.md              # Project documentation
-└── tests/
-    └── test_simulation.py # Simulation tests
-```
-
-The files labeled **planned** are not included in this engine-only package. They will be added during integration. The dependency list will also be expanded when the interface and analysis modules are added.
-
-## Install and run (Windows CMD or terminal)
 ```bash
-cd ethernet_simulator
 python -m pip install -r requirements.txt
-python demo.py
 python -m unittest discover -s tests -v
-python -m streamlit run main.py
+python demo.py --load 120 --split 0.9 --seed 1
 ```
 
-## Simulation API and integration
-```python
-from simulation import run_simulation
-result = run_simulation(link_speed=100, offered_load=50, seed=42)
-# Optional: duration=60.0, buffer_capacity=100, record_limit=10000
-```
+For a full frame export add `--all-frames`. Default export retains the first 10,000 arrivals only; counters always cover the entire run. For batch experiments use `record_limit=0, queue_sample_interval=None` to avoid unnecessary memory usage. No GUI or statistical runner is included in this engine package.
 
-`link_speed` must be 10, 100 or 1000 Mbps. `offered_load` is a **target payload traffic rate** in Mbps; realized generated traffic varies slightly with the random arrival process. Random seeds make runs reproducible.
+## Model
+Two 100 Mbps links; 1500-byte payload; 1538 byte-times (1500 payload + 14 header + 4 FCS + 8 preamble/SFD + 12 IFG). Service time is 123.04 microseconds, delivery time 122.08 microseconds. Effective payload capacity is 97.529 Mbps per link. Each link has its own independent exponential interarrival stream and FIFO waiting queue of 100 frames, excluding the frame in service. Arrival rate = assigned payload Mbps × 1e6 / 12000. Idle links admit immediately; busy links queue if space exists; only a full waiting buffer causes tail drop. Link speed remains constant. No traffic is reassigned.
 
-`result` contains:
-- `config`: selected inputs and byte/timing constants.
-- `counts`: `generated`, `accepted`, `dropped`, `completed_within_observation`, `completed_total`, `completed_during_drain`, `unfinished_at_observation`.
-- `timing`: `busy_time_observation`, `delay_sum_total`, `delay_count_total`, `delay_sum_observation`, `delay_count_observation`, `end_time` (seconds).
-- `records`: up to the first `record_limit` generated frames (delivered/dropped), with `frame_id`, `arrival_time`, `transmission_start`, `completion_time`, `status`, `payload_bytes`.
-- `records_truncated`: true when generated frame count exceeds the record cap.
+Official runs: loads 80, 120, 160 Mbps crossed with splits 50/50, 70/30, 90/10; seeds 1–10; 60 seconds, empty initial queues, no warm-up. Each seed is reused across scenarios (comparisons may be paired by seed); streams within a run are distinct. Arrivals stop before t=60; accepted frames drain. Completion at t=60 counts in observation. Drain duration includes any final IFG. Queue samples are instantaneous at 10 ms intervals, not exact maxima; exact maximum waiting occupancy is separately returned.
 
-### Metrics calculation contract
-```python
-cfg, c, t = result['config'], result['counts'], result['timing']
-seconds = cfg['duration_seconds']
-throughput_mbps = c['completed_within_observation'] * cfg['payload_bytes'] * 8 / seconds / 1e6
-average_delay_ms = t['delay_sum_total'] / t['delay_count_total'] * 1000 if t['delay_count_total'] else 0.0
-loss_percent = c['dropped'] / c['generated'] * 100 if c['generated'] else 0.0
-utilization_percent = t['busy_time_observation'] / seconds * 100
-```
-The metrics module must use **aggregate counts/timing**, not `records`, which may be capped. Delay includes accepted frames completed during drain; throughput and utilization use the 60-second observation only. `unfinished_at_observation` is **not** packet loss.
+Epoch mapping: base_epoch is captured once at run start (or supplied for deterministic testing). Each event epoch = base_epoch + simulated event time, in fractional Unix seconds UTC. These are synthetic timestamps, not captured traffic or wall-clock execution times. Calculate delays using simulated seconds, not epoch differences.
 
-### Model details
-- 1500-byte payload + 18-byte MAC header/FCS + 8-byte preamble/SFD = **1526 transmitted bytes**.
-- 12-byte-time interframe gap (IFG) is modeled as separate reserved link time, **not transmitted bytes**.
-- Total service occupancy is 1538 byte-times per frame.
-- Completion timestamp occurs at the end of frame transmission, **before** IFG.
-- FIFO queue holds at most 100 **waiting** frames; the in-service frame is excluded.
-- Arrivals stop at `duration`; the transmitter drains accepted frames afterward.
-- Zero offered traffic produces zero frames; deterministic frame length; Poisson arrival times.
-- No real physical-layer signals, collisions, retransmissions, errors, or TCP.
+## Files
+- simulation.py: reusable SimPy engine
+- config.py: official constants
+- demo.py: standalone CSV/JSON export demonstration
+- tests/: engine checks
+- INTEGRATION_GUIDE.md: shared API and formulas
+- METHODOLOGY.md: paper-ready technical methodology
+- samples/: illustrative schema fixture, not measured results
+- methodology.pptx: methodology contribution
 
-### Performance caution
-At 1200 Mbps for 60 seconds, the arrival generator creates roughly **6 million frames per run**. That is a large SimPy workload, especially for 10 repetitions and all three link speeds. For the November 6 demo, start with `duration=0.5` or `duration=1` and moderate offered loads; use 60 seconds for the formal experiments after profiling. The record cap prevents retaining millions of dictionaries but does not eliminate event-processing CPU cost.
-
-### Integration
-Copy `simulation.py` to the group project's root next to `metrics.py` and `main.py`. Keep `run_simulation` and the result keys stable when connecting the metrics and interface modules.
+## Verification status
+Python syntax compilation was performed. SimPy was unavailable in the preparation environment and installation could not reach the package index; the actual SimPy tests and demo have not been executed here. Run the commands above locally before integration or reporting results. The supplied fixture is illustrative only.
