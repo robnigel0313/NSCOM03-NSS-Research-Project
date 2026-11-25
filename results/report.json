@@ -1,0 +1,3752 @@
+{
+  "title": "Performance Analysis of Traffic Imbalance in Aggregated Ethernet Links Using Discrete-Event Simulation",
+  "overview": {
+    "total_runs": 90,
+    "total_configurations": 9,
+    "offered_loads_mbps": [
+      80.0,
+      120.0,
+      160.0
+    ],
+    "traffic_splits": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "observation_durations_seconds": [
+      60.0
+    ],
+    "number_of_links": 2,
+    "nominal_link_capacity_mbps": 100,
+    "effective_link_capacity_mbps": 97.52925877763329,
+    "combined_effective_capacity_mbps": 195.05851755526658,
+    "payload_bytes": 1500,
+    "occupancy_byte_times": 1538,
+    "confidence_level_percent": 95
+  },
+  "performance_summary": [
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.5,
+      "configuration": "80 Mbps (50/50)",
+      "link_1_throughput_mbps": {
+        "mean": 39.9391,
+        "standard_deviation": 0.10752695786018744,
+        "standard_error": 0.03400300967071374,
+        "ci_lower": 39.86217985365233,
+        "ci_upper": 40.01602014634768,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 0.16476651749931015,
+        "standard_deviation": 0.00033099138009510116,
+        "standard_error": 0.00010466866469830391,
+        "ci_lower": 0.16452974054678224,
+        "ci_upper": 0.16500329445183806,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 40.95092977485519,
+        "standard_deviation": 0.11025330755791342,
+        "standard_error": 0.03486515714500631,
+        "ci_lower": 40.87205931556351,
+        "ci_upper": 41.02980023414687,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 0.042686517500483814,
+        "standard_deviation": 0.0003309913800955701,
+        "standard_error": 0.0001046686646984522,
+        "ci_lower": 0.042449740547955556,
+        "ci_upper": 0.04292329445301207,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 40.0015,
+        "standard_deviation": 0.09472787927062966,
+        "standard_error": 0.029955585641263945,
+        "ci_lower": 39.93373576225252,
+        "ci_upper": 40.06926423774748,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.16488689179429578,
+        "standard_deviation": 0.0003400565957012487,
+        "standard_error": 0.00010753533757789692,
+        "ci_lower": 0.16464362997764656,
+        "ci_upper": 0.165130153610945,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 41.014878728321165,
+        "standard_deviation": 0.09713159330561397,
+        "standard_error": 0.030715706760690353,
+        "ci_lower": 40.945394977262524,
+        "ci_upper": 41.084362479379806,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.042806891795467844,
+        "standard_deviation": 0.0003400565957025115,
+        "standard_error": 0.00010753533757829626,
+        "ci_lower": 0.04256362997881774,
+        "ci_upper": 0.04305015361211795,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 79.9406,
+        "standard_deviation": 0.14300340322290847,
+        "standard_error": 0.045221646733985425,
+        "ci_lower": 79.83830153528919,
+        "ci_upper": 80.04289846471082,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 0.16482691634168867,
+        "standard_deviation": 0.00027008647903851833,
+        "standard_error": 8.540884389770418e-05,
+        "ci_lower": 0.16463370812760356,
+        "ci_upper": 0.16502012455577378,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 40.98290425158818,
+        "standard_deviation": 0.07331932305778992,
+        "standard_error": 0.02318560573643174,
+        "ci_lower": 40.930454771272274,
+        "ci_upper": 41.03535373190409,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 0.042746916342861534,
+        "standard_deviation": 0.00027008647903942315,
+        "standard_error": 8.54088438979903e-05,
+        "ci_lower": 0.042553708128775784,
+        "ci_upper": 0.04294012455694728,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 0.1268223934651047,
+        "standard_deviation": 0.09138170693434684,
+        "standard_error": 0.02889743303865389,
+        "ci_lower": 0.061451863034682544,
+        "ci_upper": 0.1921929238955269,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 7.3,
+        "standard_deviation": 0.6749485577105528,
+        "standard_error": 0.21343747458109494,
+        "ci_lower": 6.817170922814054,
+        "ci_upper": 7.782829077185946,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 7.7,
+        "standard_deviation": 0.6749485577105528,
+        "standard_error": 0.21343747458109494,
+        "ci_lower": 7.217170922814054,
+        "ci_upper": 8.182829077185946,
+        "n": 10
+      }
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "configuration": "80 Mbps (70/30)",
+      "link_1_throughput_mbps": {
+        "mean": 55.93604,
+        "standard_deviation": 0.09608809846524462,
+        "standard_error": 0.03038572471847026,
+        "ci_lower": 55.86730272012804,
+        "ci_upper": 56.00477727987196,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 0.20467584659406096,
+        "standard_deviation": 0.000586963311475724,
+        "standard_error": 0.00018561409672181363,
+        "ci_lower": 0.20425595836586302,
+        "ci_upper": 0.2050957348222589,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 57.35312046286026,
+        "standard_deviation": 0.09852896981249679,
+        "standard_error": 0.03115759601174632,
+        "ci_lower": 57.28263708893912,
+        "ci_upper": 57.4236038367814,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 0.08259584659523385,
+        "standard_deviation": 0.0005869633114759943,
+        "standard_error": 0.0001856140967218991,
+        "ci_lower": 0.08217595836703573,
+        "ci_upper": 0.08301573482343197,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 24.00064,
+        "standard_deviation": 0.05020817109240769,
+        "standard_error": 0.015877217780343265,
+        "ci_lower": 23.964723240657673,
+        "ci_upper": 24.03655675934233,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.14221175196026123,
+        "standard_deviation": 0.0002128467948459583,
+        "standard_error": 6.730806643798161e-05,
+        "ci_lower": 0.14205949054661207,
+        "ci_upper": 0.1423640133739104,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 24.608664300474906,
+        "standard_deviation": 0.051471336936093556,
+        "standard_error": 0.01627666589320082,
+        "ci_lower": 24.571843926787942,
+        "ci_upper": 24.64548467416187,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.020131751961431216,
+        "standard_deviation": 0.0002128467948470183,
+        "standard_error": 6.73080664383168e-05,
+        "ci_lower": 0.019979490547781312,
+        "ci_upper": 0.02028401337508112,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 79.93668,
+        "standard_deviation": 0.11859316824992615,
+        "standard_error": 0.037502452660533134,
+        "ci_lower": 79.8518435641968,
+        "ci_upper": 80.02151643580319,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 0.18592140339700364,
+        "standard_deviation": 0.0004525991984832157,
+        "standard_error": 0.0001431244334373587,
+        "ci_lower": 0.1855976334580323,
+        "ci_upper": 0.18624517333597498,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 40.98089238166759,
+        "standard_deviation": 0.06079902217378826,
+        "standard_error": 0.019226338958025255,
+        "ci_lower": 40.93739938440932,
+        "ci_upper": 41.02438537892586,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 0.06384140339817566,
+        "standard_deviation": 0.00045259919848329147,
+        "standard_error": 0.00014312443343738267,
+        "ci_lower": 0.06351763345920425,
+        "ci_upper": 0.06416517333714708,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 32.744456162385355,
+        "standard_deviation": 0.099641499624637,
+        "standard_error": 0.031509408828866554,
+        "ci_lower": 32.673176932637276,
+        "ci_upper": 32.81573539213343,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 11.5,
+        "standard_deviation": 1.1785113019775793,
+        "standard_error": 0.37267799624996495,
+        "ci_lower": 10.656943862037167,
+        "ci_upper": 12.343056137962833,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 5.5,
+        "standard_deviation": 0.97182531580755,
+        "standard_error": 0.30731814857642953,
+        "ci_lower": 4.80479809897079,
+        "ci_upper": 6.19520190102921,
+        "n": 10
+      }
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "configuration": "80 Mbps (90/10)",
+      "link_1_throughput_mbps": {
+        "mean": 71.9602,
+        "standard_deviation": 0.12795273432882312,
+        "standard_error": 0.0404622073325497,
+        "ci_lower": 71.86866813444722,
+        "ci_upper": 72.05173186555278,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 0.2946858646458379,
+        "standard_deviation": 0.0017241619049860571,
+        "standard_error": 0.0005452278674650763,
+        "ci_lower": 0.29345247360885673,
+        "ci_upper": 0.29591925568281907,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 73.78323176388837,
+        "standard_deviation": 0.13119858015443905,
+        "standard_error": 0.041488633906819304,
+        "ci_lower": 73.68937796027562,
+        "ci_upper": 73.87708556750111,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 0.1726058646471581,
+        "standard_deviation": 0.0017241619049838451,
+        "standard_error": 0.0005452278674643769,
+        "ci_lower": 0.1713724736101785,
+        "ci_upper": 0.17383925568413772,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 8.01048,
+        "standard_deviation": 0.031137430137305057,
+        "standard_error": 0.00984651997182534,
+        "ci_lower": 7.988205625920095,
+        "ci_upper": 8.032754374079904,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.12755478828427497,
+        "standard_deviation": 0.0001420022751218173,
+        "standard_error": 4.4905062231080685e-05,
+        "ci_lower": 0.1274532059834135,
+        "ci_upper": 0.12765637058513643,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 8.21343181075927,
+        "standard_deviation": 0.031961291151180585,
+        "standard_error": 0.010107047699751567,
+        "ci_lower": 8.190568082055943,
+        "ci_upper": 8.236295539462596,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.005474788285454447,
+        "standard_deviation": 0.00014200227512153245,
+        "standard_error": 4.490506223099061e-05,
+        "ci_lower": 0.005373205984593176,
+        "ci_upper": 0.005576370586315718,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 79.97068,
+        "standard_deviation": 0.11863446004897141,
+        "standard_error": 0.037515510273900037,
+        "ci_lower": 79.88581402582533,
+        "ci_upper": 80.05554597417468,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 0.2779453176304509,
+        "standard_deviation": 0.0016152331752372195,
+        "standard_error": 0.0005107815786015496,
+        "ci_lower": 0.27678984950694635,
+        "ci_upper": 0.2791007857539554,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 40.99833178732382,
+        "standard_deviation": 0.06082399345480829,
+        "standard_error": 0.019234235570436797,
+        "ci_lower": 40.954820926688505,
+        "ci_upper": 41.041842647959136,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 0.15586531763175698,
+        "standard_deviation": 0.0016152331752353913,
+        "standard_error": 0.0005107815786009715,
+        "ci_lower": 0.15470984950825376,
+        "ci_upper": 0.1570207857552602,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 65.5697999531291,
+        "standard_deviation": 0.14721056488587816,
+        "standard_error": 0.04655206806793802,
+        "ci_lower": 65.46449186648475,
+        "ci_upper": 65.67510803977346,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 19.8,
+        "standard_deviation": 3.2930904093942583,
+        "standard_error": 1.0413666234542205,
+        "ci_lower": 17.44426520318667,
+        "ci_upper": 22.15573479681333,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 2.9,
+        "standard_deviation": 0.31622776601683794,
+        "standard_error": 0.09999999999999999,
+        "ci_lower": 2.6737843,
+        "ci_upper": 3.1262157,
+        "n": 10
+      }
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.5,
+      "configuration": "120 Mbps (50/50)",
+      "link_1_throughput_mbps": {
+        "mean": 59.93958,
+        "standard_deviation": 0.09695389282196683,
+        "standard_error": 0.030659512933726506,
+        "ci_lower": 59.87022336820038,
+        "ci_upper": 60.00893663179962,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 0.21989985765010206,
+        "standard_deviation": 0.0007469412880208387,
+        "standard_error": 0.00023620357485656932,
+        "ci_lower": 0.21936552807981524,
+        "ci_upper": 0.22043418722038888,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 61.45808166553584,
+        "standard_deviation": 0.09942001282764991,
+        "standard_error": 0.0314393685538531,
+        "ci_lower": 61.38696087788617,
+        "ci_upper": 61.52920245318552,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 0.09781985765132259,
+        "standard_deviation": 0.0007469412880226978,
+        "standard_error": 0.00023620357485715723,
+        "ci_lower": 0.09728552808103445,
+        "ci_upper": 0.09835418722161073,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 60.00152,
+        "standard_deviation": 0.08499287290381657,
+        "standard_error": 0.02687710632572695,
+        "ci_lower": 59.94071976578551,
+        "ci_upper": 60.06232023421449,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.22044666933841525,
+        "standard_deviation": 0.0008404623778170364,
+        "standard_error": 0.000265777540158281,
+        "ci_lower": 0.21984543881550342,
+        "ci_upper": 0.22104789986132709,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 61.52160868092628,
+        "standard_deviation": 0.08717462816565803,
+        "standard_error": 0.027567037918174556,
+        "ci_lower": 61.45924771313042,
+        "ci_upper": 61.58396964872214,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.09836666933963939,
+        "standard_deviation": 0.0008404623778181061,
+        "standard_error": 0.00026577754015861925,
+        "ci_lower": 0.0977654388167268,
+        "ci_upper": 0.09896789986255199,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 119.9411,
+        "standard_deviation": 0.12994392807839977,
+        "standard_error": 0.041091878083685016,
+        "ci_lower": 119.84814372034985,
+        "ci_upper": 120.03405627965016,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 0.22017361791085907,
+        "standard_deviation": 0.0006512982007308251,
+        "standard_error": 0.00020595857502789488,
+        "ci_lower": 0.2197077072786497,
+        "ci_upper": 0.22063952854306845,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 61.48984517323106,
+        "standard_deviation": 0.06664005131316668,
+        "standard_error": 0.021073434554010145,
+        "ci_lower": 61.44217375574066,
+        "ci_upper": 61.53751659072146,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 0.09809361791208142,
+        "standard_deviation": 0.0006512982007316587,
+        "standard_error": 0.0002059585750281585,
+        "ci_lower": 0.09762770727987144,
+        "ci_upper": 0.0985595285442914,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 0.11415997082461046,
+        "standard_deviation": 0.08489676154608226,
+        "standard_error": 0.026846713245781785,
+        "ci_lower": 0.05342849052867247,
+        "ci_upper": 0.17489145112054846,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 13.1,
+        "standard_deviation": 1.286683937707919,
+        "standard_error": 0.40688518719112343,
+        "ci_lower": 12.17956182559929,
+        "ci_upper": 14.02043817440071,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 12.9,
+        "standard_deviation": 1.1005049346146119,
+        "standard_error": 0.348010216963685,
+        "ci_lower": 12.112746251624081,
+        "ci_upper": 13.68725374837592,
+        "n": 10
+      }
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "configuration": "120 Mbps (70/30)",
+      "link_1_throughput_mbps": {
+        "mean": 83.94328,
+        "standard_deviation": 0.14236548270794788,
+        "standard_error": 0.04501991855464313,
+        "ci_lower": 83.84143787610219,
+        "ci_upper": 84.04512212389781,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 0.5002112160734442,
+        "standard_deviation": 0.006091145156840043,
+        "standard_error": 0.0019261892254318084,
+        "ci_lower": 0.49585387363380906,
+        "ci_upper": 0.5045685585130794,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 86.06995572258901,
+        "standard_deviation": 0.1459894116861999,
+        "standard_error": 0.04616590551963944,
+        "ci_lower": 85.96552119625642,
+        "ci_upper": 86.17439024892161,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 0.37813121607520644,
+        "standard_deviation": 0.00609114515684283,
+        "standard_error": 0.0019261892254326897,
+        "ci_lower": 0.3737738736355693,
+        "ci_upper": 0.3824885585148436,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 36.00964,
+        "standard_deviation": 0.08633952616141578,
+        "standard_error": 0.027302955476976847,
+        "ci_lower": 35.94787642814707,
+        "ci_upper": 36.071403571852926,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.1581495579687836,
+        "standard_deviation": 0.0003349311339008713,
+        "standard_error": 0.00010591452424295894,
+        "ci_lower": 0.15790996268636573,
+        "ci_upper": 0.15838915325120148,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 36.92193218169922,
+        "standard_deviation": 0.08852554526553441,
+        "standard_error": 0.02799423541474241,
+        "ci_lower": 36.85860482609611,
+        "ci_upper": 36.985259537302326,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.03606955796995552,
+        "standard_deviation": 0.00033493113390084344,
+        "standard_error": 0.00010591452424295013,
+        "ci_lower": 0.03582996268753766,
+        "ci_upper": 0.03630915325237338,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 119.95292,
+        "standard_deviation": 0.18716833065451804,
+        "standard_error": 0.05918782307197908,
+        "ci_lower": 119.81902785172296,
+        "ci_upper": 120.08681214827705,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 0.3975267404517602,
+        "standard_deviation": 0.00435210700197072,
+        "standard_error": 0.0013762570746994386,
+        "ci_lower": 0.3944134308764293,
+        "ci_upper": 0.400640050027091,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 61.49594395214412,
+        "standard_deviation": 0.09594305970757938,
+        "standard_error": 0.030339859436147924,
+        "ci_lower": 61.42731042674162,
+        "ci_upper": 61.564577477546614,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 0.27544674045334516,
+        "standard_deviation": 0.004352107001972354,
+        "standard_error": 0.0013762570746999555,
+        "ci_lower": 0.27233343087801315,
+        "ci_upper": 0.2785600500286772,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 49.148023540889795,
+        "standard_deviation": 0.1465574227184646,
+        "standard_error": 0.046345526379445424,
+        "ci_lower": 49.04318268397185,
+        "ci_upper": 49.25286439780774,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 34.1,
+        "standard_deviation": 2.8067379246694513,
+        "standard_error": 0.8875684637129565,
+        "ci_lower": 32.09218078683249,
+        "ci_upper": 36.10781921316751,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 7.1,
+        "standard_deviation": 0.7378647873726218,
+        "standard_error": 0.2333333333333333,
+        "ci_lower": 6.572163366666667,
+        "ci_upper": 7.627836633333333,
+        "n": 10
+      }
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "configuration": "120 Mbps (90/10)",
+      "link_1_throughput_mbps": {
+        "mean": 97.52812,
+        "standard_deviation": 0.0014304622407550463,
+        "standard_error": 0.00045235187876540846,
+        "ci_lower": 97.52709670903099,
+        "ci_upper": 97.52914329096902,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 11.819840385444268,
+        "standard_deviation": 0.011704476097475082,
+        "standard_error": 0.0037012803287020226,
+        "ci_lower": 11.811467508239732,
+        "ci_upper": 11.828213262648804,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 9.60899255450253,
+        "standard_deviation": 0.13158181787975246,
+        "standard_error": 0.04160982431654854,
+        "ci_lower": 9.514864599156079,
+        "ci_upper": 9.703120509848981,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 99.99892187279116,
+        "standard_deviation": 0.0014903014817441735,
+        "standard_error": 0.00047127470826354334,
+        "ci_lower": 99.99785577541094,
+        "ci_upper": 99.99998797017138,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 11.697760385445438,
+        "standard_deviation": 0.011704476097568648,
+        "standard_error": 0.0037012803287316104,
+        "ci_lower": 11.689387508240836,
+        "ci_upper": 11.70613326265004,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 12.0189,
+        "standard_deviation": 0.02648357981844591,
+        "standard_error": 0.008374843282115763,
+        "ci_lower": 11.999954789645459,
+        "ci_upper": 12.037845210354542,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.13070182037802613,
+        "standard_deviation": 0.00014830281494557972,
+        "standard_error": 4.6897467864249196e-05,
+        "ci_lower": 0.13059573094281474,
+        "ci_upper": 0.13080790981323753,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 12.323378800006228,
+        "standard_deviation": 0.02715449717386296,
+        "standard_error": 0.008587005978601223,
+        "ci_lower": 12.303953644322693,
+        "ci_upper": 12.342803955689764,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.008621820379203157,
+        "standard_deviation": 0.00014830281494259234,
+        "standard_error": 4.6897467863304504e-05,
+        "ci_lower": 0.008515730943993908,
+        "ci_upper": 0.008727909814412406,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 109.54702,
+        "standard_deviation": 0.027517824526416903,
+        "standard_error": 0.008701900175632169,
+        "ci_lower": 109.5273349356044,
+        "ci_upper": 109.5667050643956,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 10.537593527632154,
+        "standard_deviation": 0.010132148598471885,
+        "standard_error": 0.0032040667162453996,
+        "ci_lower": 10.530345425681533,
+        "ci_upper": 10.544841629582775,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 8.646074455254862,
+        "standard_deviation": 0.11922291458413356,
+        "standard_error": 0.03770159593695684,
+        "ci_lower": 8.560787526094904,
+        "ci_upper": 8.73136138441482,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 56.16115033639869,
+        "standard_deviation": 0.01411852891308869,
+        "standard_error": 0.004464670857630171,
+        "ci_lower": 56.151050549965404,
+        "ci_upper": 56.17125012283198,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 10.415513527633326,
+        "standard_deviation": 0.010132148598573988,
+        "standard_error": 0.003204066716277687,
+        "ci_lower": 10.408265425682632,
+        "ci_upper": 10.42276162958402,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 87.67554307278492,
+        "standard_deviation": 0.02611214269003894,
+        "standard_error": 0.008257384548783919,
+        "ci_lower": 87.65686357252619,
+        "ci_upper": 87.69422257304365,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 100.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 100.0,
+        "ci_upper": 100.0,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 3.5,
+        "standard_deviation": 0.5270462766947299,
+        "standard_error": 0.16666666666666666,
+        "ci_lower": 3.1229738333333334,
+        "ci_upper": 3.8770261666666666,
+        "n": 10
+      }
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.5,
+      "configuration": "160 Mbps (50/50)",
+      "link_1_throughput_mbps": {
+        "mean": 79.94200000000001,
+        "standard_deviation": 0.13660255406755056,
+        "standard_error": 0.04319752050497583,
+        "ci_lower": 79.84428042660703,
+        "ci_upper": 80.03971957339299,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 0.4006977302869612,
+        "standard_deviation": 0.003490126143940153,
+        "standard_error": 0.0011036747936151554,
+        "ci_lower": 0.3982010446268611,
+        "ci_upper": 0.4031944159470613,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 81.96729596838993,
+        "standard_deviation": 0.14007301550758183,
+        "standard_error": 0.04429497677320449,
+        "ci_lower": 81.8670937766176,
+        "ci_upper": 82.06749816016227,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 0.27861773028859116,
+        "standard_deviation": 0.0034901261439480003,
+        "standard_error": 0.001103674793617637,
+        "ci_lower": 0.27612104462848547,
+        "ci_upper": 0.28111441594869685,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 79.95949999999999,
+        "standard_deviation": 0.1406445243236374,
+        "standard_error": 0.04447570372936467,
+        "ci_lower": 79.85888897547868,
+        "ci_upper": 80.0601110245213,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.4024477186999408,
+        "standard_deviation": 0.0051374090363688965,
+        "standard_error": 0.0016245913826856521,
+        "ci_lower": 0.39877263793145873,
+        "ci_upper": 0.40612279946842283,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 81.98520587027703,
+        "standard_deviation": 0.14421411643927703,
+        "standard_error": 0.045604507869684716,
+        "ci_lower": 81.88204131356807,
+        "ci_upper": 82.08837042698599,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.28036771870158667,
+        "standard_deviation": 0.0051374090363862515,
+        "standard_error": 0.0016245913826911404,
+        "ci_lower": 0.27669263793309223,
+        "ci_upper": 0.2840427994700811,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 159.9015,
+        "standard_deviation": 0.19940645815909716,
+        "standard_error": 0.06305785879298136,
+        "ci_lower": 159.75885322332644,
+        "ci_upper": 160.04414677667356,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 0.40157479191898626,
+        "standard_deviation": 0.0036895077591971646,
+        "standard_error": 0.001166724796392709,
+        "ci_lower": 0.39893547725375295,
+        "ci_upper": 0.4042141065842196,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 81.97625091933348,
+        "standard_deviation": 0.10224719505480086,
+        "standard_error": 0.032333402073667555,
+        "ci_lower": 81.90310768749872,
+        "ci_upper": 82.04939415116824,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 0.2794947919206242,
+        "standard_deviation": 0.003689507759209876,
+        "standard_error": 0.0011667247963967286,
+        "ci_lower": 0.2768554772553818,
+        "ci_upper": 0.28213410658586663,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 0.144992508606272,
+        "standard_deviation": 0.12655462984966323,
+        "standard_error": 0.040020087876446835,
+        "ci_lower": 0.05446078667595265,
+        "ci_upper": 0.23552423053659133,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 27.8,
+        "standard_deviation": 2.898275349237888,
+        "standard_error": 0.916515138991168,
+        "ci_lower": 25.726698862725158,
+        "ci_upper": 29.873301137274844,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 29.5,
+        "standard_deviation": 4.790035954399971,
+        "standard_error": 1.5147423690002348,
+        "ci_lower": 26.073414946769535,
+        "ci_upper": 32.92658505323047,
+        "n": 10
+      }
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "configuration": "160 Mbps (70/30)",
+      "link_1_throughput_mbps": {
+        "mean": 97.52824,
+        "standard_deviation": 0.001319259051300139,
+        "standard_error": 0.0004171863425901359,
+        "ci_lower": 97.5272962589948,
+        "ci_upper": 97.5291837410052,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 11.982554409349836,
+        "standard_deviation": 0.00548499827559134,
+        "standard_error": 0.0017345087512964578,
+        "ci_lower": 11.978630678236529,
+        "ci_upper": 11.986478140463143,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 12.829832606210795,
+        "standard_deviation": 0.11522054333654669,
+        "standard_error": 0.03643593501856242,
+        "ci_lower": 12.74740880075701,
+        "ci_upper": 12.91225641166458,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 99.99906787983849,
+        "standard_deviation": 0.001355482514182345,
+        "standard_error": 0.0004286412073347698,
+        "ci_lower": 99.99809822613084,
+        "ci_upper": 100.00003753354615,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 11.860474409351172,
+        "standard_deviation": 0.005484998275597968,
+        "standard_error": 0.0017345087512985536,
+        "ci_lower": 11.856550678237861,
+        "ci_upper": 11.864398140464482,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 48.00624,
+        "standard_deviation": 0.08878652550421881,
+        "standard_error": 0.028076764612596117,
+        "ci_lower": 47.94272595039426,
+        "ci_upper": 48.069754049605734,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.1817321505339074,
+        "standard_deviation": 0.0004192761858771493,
+        "standard_error": 0.00013258677160399142,
+        "ci_lower": 0.18143221844041602,
+        "ci_upper": 0.18203208262739878,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 49.222471804879305,
+        "standard_deviation": 0.09104607140637434,
+        "standard_error": 0.028791295765447263,
+        "ci_lower": 49.157341373624426,
+        "ci_upper": 49.287602236134184,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.05965215053508099,
+        "standard_deviation": 0.00041927618587685406,
+        "standard_error": 0.00013258677160389804,
+        "ci_lower": 0.059352218441589825,
+        "ci_upper": 0.05995208262857215,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 145.53448,
+        "standard_deviation": 0.08872365086166371,
+        "standard_error": 0.02805688190484181,
+        "ci_lower": 145.4710109282008,
+        "ci_upper": 145.5979490717992,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 8.090436082187656,
+        "standard_deviation": 0.004750944578997857,
+        "standard_error": 0.0015023805906862987,
+        "ci_lower": 8.08703746141777,
+        "ci_upper": 8.093834702957542,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 8.978271814211235,
+        "standard_deviation": 0.08406064976305193,
+        "standard_error": 0.026582311484493748,
+        "ci_lower": 8.918138452210407,
+        "ci_upper": 9.038405176212063,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 74.6107698423589,
+        "standard_deviation": 0.04549603351652681,
+        "standard_error": 0.014387109041558457,
+        "ci_lower": 74.57822394293078,
+        "ci_upper": 74.64331574178703,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 7.968356082188938,
+        "standard_deviation": 0.004750944579096251,
+        "standard_error": 0.0015023805907174138,
+        "ci_lower": 7.964957461418983,
+        "ci_upper": 7.9717547029588935,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 50.77659607495919,
+        "standard_deviation": 0.09112020983192233,
+        "standard_error": 0.028814740394134307,
+        "ci_lower": 50.71141260827341,
+        "ci_upper": 50.84177954164496,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 100.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 100.0,
+        "ci_upper": 100.0,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 8.9,
+        "standard_deviation": 0.7378647873726218,
+        "standard_error": 0.2333333333333333,
+        "ci_lower": 8.372163366666667,
+        "ci_upper": 9.427836633333333,
+        "n": 10
+      }
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "configuration": "160 Mbps (90/10)",
+      "link_1_throughput_mbps": {
+        "mean": 97.52878,
+        "standard_deviation": 0.0005287301349040079,
+        "standard_error": 0.00016719914938647577,
+        "ci_lower": 97.52840176927381,
+        "ci_upper": 97.52915823072618,
+        "n": 10
+      },
+      "link_1_average_delay_ms": {
+        "mean": 12.27531361669695,
+        "standard_deviation": 0.0007668671969771599,
+        "standard_error": 0.00024250470053168168,
+        "ci_lower": 12.274765032991109,
+        "ci_upper": 12.275862200402791,
+        "n": 10
+      },
+      "link_1_frame_loss_percent": {
+        "mean": 32.21487951576936,
+        "standard_deviation": 0.06251168751697293,
+        "standard_error": 0.019767931293435004,
+        "ci_lower": 32.1701613516184,
+        "ci_upper": 32.259597679920326,
+        "n": 10
+      },
+      "link_1_utilization_percent": {
+        "mean": 99.9996163697698,
+        "standard_deviation": 0.0005033100191245666,
+        "standard_error": 0.00015916060296165366,
+        "ci_lower": 99.99925632349768,
+        "ci_upper": 99.99997641604192,
+        "n": 10
+      },
+      "link_1_average_queue_delay_ms": {
+        "mean": 12.15323361669825,
+        "standard_deviation": 0.000766867196868254,
+        "standard_error": 0.0002425047004972426,
+        "ci_lower": 12.152685032992487,
+        "ci_upper": 12.153782200404013,
+        "n": 10
+      },
+      "link_2_throughput_mbps": {
+        "mean": 16.02034,
+        "standard_deviation": 0.03759622321457328,
+        "standard_error": 0.011888969677814889,
+        "ci_lower": 15.993445284020543,
+        "ci_upper": 16.047234715979457,
+        "n": 10
+      },
+      "link_2_average_delay_ms": {
+        "mean": 0.13419876065973213,
+        "standard_deviation": 0.0001608663020412198,
+        "standard_error": 5.087039132188483e-05,
+        "ci_lower": 0.13408368384791058,
+        "ci_upper": 0.13431383747155368,
+        "n": 10
+      },
+      "link_2_frame_loss_percent": {
+        "mean": 0.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "n": 10
+      },
+      "link_2_utilization_percent": {
+        "mean": 16.42621164856932,
+        "standard_deviation": 0.03856539817048953,
+        "standard_error": 0.012195449709003754,
+        "ci_lower": 16.39862362664195,
+        "ci_upper": 16.453799670496693,
+        "n": 10
+      },
+      "link_2_average_queue_delay_ms": {
+        "mean": 0.012118760660903425,
+        "standard_deviation": 0.0001608663020401725,
+        "standard_error": 5.087039132155365e-05,
+        "ci_lower": 0.012003683849082633,
+        "ci_upper": 0.012233837472724217,
+        "n": 10
+      },
+      "aggregate_throughput_mbps": {
+        "mean": 113.54912,
+        "standard_deviation": 0.03798867667549879,
+        "standard_error": 0.012013074359028939,
+        "ci_lower": 113.52194453974721,
+        "ci_upper": 113.5762954602528,
+        "n": 10
+      },
+      "aggregate_average_delay_ms": {
+        "mean": 10.562655003366375,
+        "standard_deviation": 0.0032142556566860507,
+        "standard_error": 0.001016436885720814,
+        "ci_lower": 10.560355663550283,
+        "ci_upper": 10.564954343182468,
+        "n": 10
+      },
+      "aggregate_frame_loss_percent": {
+        "mean": 28.987861094985437,
+        "standard_deviation": 0.05424623505883726,
+        "standard_error": 0.017154165727480377,
+        "ci_lower": 28.949055678905857,
+        "ci_upper": 29.026666511065017,
+        "n": 10
+      },
+      "aggregate_utilization_percent": {
+        "mean": 58.21291400916956,
+        "standard_deviation": 0.019472172046473137,
+        "standard_error": 0.0061576414657517195,
+        "ci_lower": 58.19898445742432,
+        "ci_upper": 58.2268435609148,
+        "n": 10
+      },
+      "aggregate_average_queue_delay_ms": {
+        "mean": 10.440575003367655,
+        "standard_deviation": 0.0032142556566707404,
+        "standard_error": 0.0010164368857159727,
+        "ci_lower": 10.438275663551575,
+        "ci_upper": 10.442874343183735,
+        "n": 10
+      },
+      "utilization_gap_pp": {
+        "mean": 83.57340472120048,
+        "standard_deviation": 0.038189325435484596,
+        "standard_error": 0.0120765250681533,
+        "ci_lower": 83.54608572548187,
+        "ci_upper": 83.60072371691908,
+        "n": 10
+      },
+      "link_1_max_queue_length": {
+        "mean": 100.0,
+        "standard_deviation": 0.0,
+        "standard_error": 0.0,
+        "ci_lower": 100.0,
+        "ci_upper": 100.0,
+        "n": 10
+      },
+      "link_2_max_queue_length": {
+        "mean": 4.1,
+        "standard_deviation": 0.31622776601683794,
+        "standard_error": 0.09999999999999999,
+        "ci_lower": 3.8737842999999996,
+        "ci_upper": 4.3262157,
+        "n": 10
+      }
+    }
+  ],
+  "metric_interpretations": [
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_throughput_mbps",
+      "scope": "link_1",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": 15.996939999999997,
+      "ci_lower": 15.973478422922737,
+      "ci_upper": 16.020401577077255,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 1 throughput increased by an average of 15.9969 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_delay_ms",
+      "scope": "link_1",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 0.0399093290947508,
+      "ci_lower": 0.03963100699263608,
+      "ci_upper": 0.040187651196865515,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 1 average frame delay increased by an average of 0.0399 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_frame_loss_percent",
+      "scope": "link_1",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 1 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_utilization_percent",
+      "scope": "link_1",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": 16.40219068800507,
+      "ci_lower": 16.378151551658522,
+      "ci_upper": 16.42622982435162,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 1 link utilization increased by an average of 16.4022 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_queue_delay_ms",
+      "scope": "link_1",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 0.039909329094750035,
+      "ci_lower": 0.03963100699263493,
+      "ci_upper": 0.04018765119686514,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 1 average queueing delay increased by an average of 0.0399 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_throughput_mbps",
+      "scope": "link_2",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -16.00086,
+      "ci_lower": -16.046176427313064,
+      "ci_upper": -15.955543572686935,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 2 throughput decreased by an average of 16.0009 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_delay_ms",
+      "scope": "link_2",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": -0.02267513983403454,
+      "ci_lower": -0.02282404467378236,
+      "ci_upper": -0.022526234994286718,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 2 average frame delay decreased by an average of 0.0227 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_frame_loss_percent",
+      "scope": "link_2",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 2 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_utilization_percent",
+      "scope": "link_2",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -16.40621442784626,
+      "ci_lower": -16.452693058420795,
+      "ci_upper": -16.35973579727172,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 2 link utilization decreased by an average of 16.4062 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_queue_delay_ms",
+      "scope": "link_2",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": -0.022675139834036625,
+      "ci_lower": -0.022824044673786414,
+      "ci_upper": -0.022526234994286836,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 2 average queueing delay decreased by an average of 0.0227 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_throughput_mbps",
+      "scope": "aggregate",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -0.003919999999999391,
+      "ci_lower": -0.048777796942459185,
+      "ci_upper": 0.04093779694246041,
+      "direction": "inconclusive",
+      "impact": "inconclusive",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, aggregate throughput had a mean difference of -0.0039 Mbps. However, the confidence interval includes zero, providing insufficient evidence to establish the direction of change."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_delay_ms",
+      "scope": "aggregate",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 0.02109448705531498,
+      "ci_lower": 0.020883376555406688,
+      "ci_upper": 0.021305597555223273,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, aggregate average frame delay increased by an average of 0.0211 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_frame_loss_percent",
+      "scope": "aggregate",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, aggregate frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_utilization_percent",
+      "scope": "aggregate",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -0.002011869920592346,
+      "ci_lower": -0.025013714055908114,
+      "ci_upper": 0.020989974214723425,
+      "direction": "inconclusive",
+      "impact": "inconclusive",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, aggregate link utilization had a mean difference of -0.0020 percentage points. However, the confidence interval includes zero, providing insufficient evidence to establish the direction of change."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_queue_delay_ms",
+      "scope": "aggregate",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 0.021094487055314134,
+      "ci_lower": 0.020883376555405567,
+      "ci_upper": 0.0213055975552227,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, aggregate average queueing delay increased by an average of 0.0211 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "utilization_gap_pp",
+      "scope": "system",
+      "label": "Utilization gap",
+      "unit": "percentage points",
+      "mean_difference": 32.61763376892025,
+      "ci_lower": 32.498123440814076,
+      "ci_upper": 32.73714409702642,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, system utilization gap increased by an average of 32.6176 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_max_queue_length",
+      "scope": "link_1",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": 4.2,
+      "ci_lower": 3.091773926386967,
+      "ci_upper": 5.308226073613033,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 1 maximum queue length increased by an average of 4.2000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_max_queue_length",
+      "scope": "link_2",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": -2.2,
+      "ci_lower": -2.6524314,
+      "ci_upper": -1.7475686000000001,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 70/30 distribution, compared with 50/50, link 2 maximum queue length decreased by an average of 2.2000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_throughput_mbps",
+      "scope": "link_1",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": 32.0211,
+      "ci_lower": 31.985830964361774,
+      "ci_upper": 32.05636903563822,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 1 throughput increased by an average of 32.0211 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_delay_ms",
+      "scope": "link_1",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 0.12991934714652775,
+      "ci_lower": 0.12881966286581625,
+      "ci_upper": 0.13101903142723925,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 1 average frame delay increased by an average of 0.1299 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_frame_loss_percent",
+      "scope": "link_1",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 1 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_utilization_percent",
+      "scope": "link_1",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": 32.83230198903318,
+      "ci_lower": 32.79614347538259,
+      "ci_upper": 32.868460502683774,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 1 link utilization increased by an average of 32.8323 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_queue_delay_ms",
+      "scope": "link_1",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 0.12991934714667427,
+      "ci_lower": 0.1288196628659657,
+      "ci_upper": 0.13101903142738286,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 1 average queueing delay increased by an average of 0.1299 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_throughput_mbps",
+      "scope": "link_2",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -31.99102,
+      "ci_lower": -32.05575980674889,
+      "ci_upper": -31.92628019325111,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 2 throughput decreased by an average of 31.9910 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_delay_ms",
+      "scope": "link_2",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": -0.037332103510020795,
+      "ci_lower": -0.037526657365887034,
+      "ci_upper": -0.037137549654154556,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 2 average frame delay decreased by an average of 0.0373 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_frame_loss_percent",
+      "scope": "link_2",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 2 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_utilization_percent",
+      "scope": "link_2",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -32.8014469175619,
+      "ci_lower": -32.86783158945312,
+      "ci_upper": -32.735062245670676,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 2 link utilization decreased by an average of 32.8014 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_queue_delay_ms",
+      "scope": "link_2",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": -0.0373321035100134,
+      "ci_lower": -0.0375266573658842,
+      "ci_upper": -0.03713754965414259,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 2 average queueing delay decreased by an average of 0.0373 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_throughput_mbps",
+      "scope": "aggregate",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": 0.03007999999999953,
+      "ci_lower": -0.03259013093319333,
+      "ci_upper": 0.0927501309331924,
+      "direction": "inconclusive",
+      "impact": "inconclusive",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, aggregate throughput had a mean difference of +0.0301 Mbps. However, the confidence interval includes zero, providing insufficient evidence to establish the direction of change."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_delay_ms",
+      "scope": "aggregate",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 0.11311840128876224,
+      "ci_lower": 0.11203705189208114,
+      "ci_upper": 0.11419975068544334,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, aggregate average frame delay increased by an average of 0.1131 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_frame_loss_percent",
+      "scope": "aggregate",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, aggregate frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_utilization_percent",
+      "scope": "aggregate",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": 0.015427535735645393,
+      "ci_lower": -0.01669339532359191,
+      "ci_upper": 0.04754846679488269,
+      "direction": "inconclusive",
+      "impact": "inconclusive",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, aggregate link utilization had a mean difference of +0.0154 percentage points. However, the confidence interval includes zero, providing insufficient evidence to establish the direction of change."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_queue_delay_ms",
+      "scope": "aggregate",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 0.11311840128889547,
+      "ci_lower": 0.1120370518922163,
+      "ci_upper": 0.11419975068557464,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, aggregate average queueing delay increased by an average of 0.1131 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "utilization_gap_pp",
+      "scope": "system",
+      "label": "Utilization gap",
+      "unit": "percentage points",
+      "mean_difference": 65.442977559664,
+      "ci_lower": 65.2909560022777,
+      "ci_upper": 65.5949991170503,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, system utilization gap increased by an average of 65.4430 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_max_queue_length",
+      "scope": "link_1",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": 12.5,
+      "ci_lower": 10.039200147722699,
+      "ci_upper": 14.960799852277301,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 1 maximum queue length increased by an average of 12.5000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_max_queue_length",
+      "scope": "link_2",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": -4.8,
+      "ci_lower": -5.2524314,
+      "ci_upper": -4.3475686,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 80 Mbps with a 90/10 distribution, compared with 50/50, link 2 maximum queue length decreased by an average of 4.8000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_throughput_mbps",
+      "scope": "link_1",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": 24.0037,
+      "ci_lower": 23.952265438663176,
+      "ci_upper": 24.05513456133682,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 1 throughput increased by an average of 24.0037 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_delay_ms",
+      "scope": "link_1",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 0.28031135842334215,
+      "ci_lower": 0.27614482724706046,
+      "ci_upper": 0.28447788959962383,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 1 average frame delay increased by an average of 0.2803 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_frame_loss_percent",
+      "scope": "link_1",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 1 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_utilization_percent",
+      "scope": "link_1",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": 24.611874057053164,
+      "ci_lower": 24.559147942961687,
+      "ci_upper": 24.66460017114464,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 1 link utilization increased by an average of 24.6119 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_queue_delay_ms",
+      "scope": "link_1",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 0.2803113584238839,
+      "ci_lower": 0.27614482724760125,
+      "ci_upper": 0.2844778896001665,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 1 average queueing delay increased by an average of 0.2803 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_throughput_mbps",
+      "scope": "link_2",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -23.99188,
+      "ci_lower": -24.03536152143217,
+      "ci_upper": -23.948398478567828,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 2 throughput decreased by an average of 23.9919 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_delay_ms",
+      "scope": "link_2",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": -0.06229711136963163,
+      "ci_lower": -0.06278505196796359,
+      "ci_upper": -0.06180917077129968,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 2 average frame delay decreased by an average of 0.0623 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_frame_loss_percent",
+      "scope": "link_2",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 2 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_utilization_percent",
+      "scope": "link_2",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -24.59967649922706,
+      "ci_lower": -24.64429517900329,
+      "ci_upper": -24.555057819450827,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 2 link utilization decreased by an average of 24.5997 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_queue_delay_ms",
+      "scope": "link_2",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": -0.06229711136968386,
+      "ci_lower": -0.06278505196801502,
+      "ci_upper": -0.0618091707713527,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 2 average queueing delay decreased by an average of 0.0623 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_throughput_mbps",
+      "scope": "aggregate",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": 0.011820000000000164,
+      "ci_lower": -0.0743872110093504,
+      "ci_upper": 0.09802721100935073,
+      "direction": "inconclusive",
+      "impact": "inconclusive",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, aggregate throughput had a mean difference of +0.0118 Mbps. However, the confidence interval includes zero, providing insufficient evidence to establish the direction of change."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_delay_ms",
+      "scope": "aggregate",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 0.17735312254090108,
+      "ci_lower": 0.1743383190285167,
+      "ci_upper": 0.18036792605328544,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, aggregate average frame delay increased by an average of 0.1774 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_frame_loss_percent",
+      "scope": "aggregate",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, aggregate frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_utilization_percent",
+      "scope": "aggregate",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": 0.006098778913054303,
+      "ci_lower": -0.03809830964485532,
+      "ci_upper": 0.05029586747096393,
+      "direction": "inconclusive",
+      "impact": "inconclusive",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, aggregate link utilization had a mean difference of +0.0061 percentage points. However, the confidence interval includes zero, providing insufficient evidence to establish the direction of change."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_queue_delay_ms",
+      "scope": "aggregate",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 0.17735312254126376,
+      "ci_lower": 0.1743383190288788,
+      "ci_upper": 0.1803679260536487,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, aggregate average queueing delay increased by an average of 0.1774 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "utilization_gap_pp",
+      "scope": "system",
+      "label": "Utilization gap",
+      "unit": "percentage points",
+      "mean_difference": 49.03386357006518,
+      "ci_lower": 48.8875520291381,
+      "ci_upper": 49.18017511099226,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, system utilization gap increased by an average of 49.0339 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_max_queue_length",
+      "scope": "link_1",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": 21.0,
+      "ci_lower": 18.431790295107668,
+      "ci_upper": 23.568209704892332,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 1 maximum queue length increased by an average of 21.0000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_max_queue_length",
+      "scope": "link_2",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": -5.8,
+      "ci_lower": -6.612139217640864,
+      "ci_upper": -4.987860782359135,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 70/30 distribution, compared with 50/50, link 2 maximum queue length decreased by an average of 5.8000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_throughput_mbps",
+      "scope": "link_1",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": 37.588539999999995,
+      "ci_lower": 37.519721727040796,
+      "ci_upper": 37.65735827295919,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 1 throughput increased by an average of 37.5885 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_delay_ms",
+      "scope": "link_1",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 11.599940527794166,
+      "ci_lower": 11.591543953947028,
+      "ci_upper": 11.608337101641304,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 1 average frame delay increased by an average of 11.5999 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_frame_loss_percent",
+      "scope": "link_1",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 9.60899255450253,
+      "ci_lower": 9.514864599156079,
+      "ci_upper": 9.703120509848981,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 1 frame loss increased by an average of 9.6090 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_utilization_percent",
+      "scope": "link_1",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": 38.5408402072553,
+      "ci_lower": 38.47028531258576,
+      "ci_upper": 38.61139510192484,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 1 link utilization increased by an average of 38.5408 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_queue_delay_ms",
+      "scope": "link_1",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 11.599940527794114,
+      "ci_lower": 11.591543953946912,
+      "ci_upper": 11.608337101641316,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 1 average queueing delay increased by an average of 11.5999 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_throughput_mbps",
+      "scope": "link_2",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -47.98262,
+      "ci_lower": -48.041772334953826,
+      "ci_upper": -47.92346766504617,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 2 throughput decreased by an average of 47.9826 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_delay_ms",
+      "scope": "link_2",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": -0.08974484896038912,
+      "ci_lower": -0.09029511309646229,
+      "ci_upper": -0.08919458482431594,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 2 average frame delay decreased by an average of 0.0897 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_frame_loss_percent",
+      "scope": "link_2",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 2 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_utilization_percent",
+      "scope": "link_2",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -49.19822988092005,
+      "ci_lower": -49.258899495896486,
+      "ci_upper": -49.13756026594362,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 2 link utilization decreased by an average of 49.1982 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_queue_delay_ms",
+      "scope": "link_2",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": -0.08974484896043622,
+      "ci_lower": -0.09029511309651116,
+      "ci_upper": -0.08919458482436128,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 2 average queueing delay decreased by an average of 0.0897 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_throughput_mbps",
+      "scope": "aggregate",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -10.394079999999997,
+      "ci_lower": -10.484924730175424,
+      "ci_upper": -10.30323526982457,
+      "direction": "decrease",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, aggregate throughput decreased by an average of 10.3941 Mbps. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_delay_ms",
+      "scope": "aggregate",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 10.317419909721295,
+      "ci_lower": 10.310273614319746,
+      "ci_upper": 10.324566205122844,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, aggregate average frame delay increased by an average of 10.3174 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_frame_loss_percent",
+      "scope": "aggregate",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 8.646074455254862,
+      "ci_lower": 8.560787526094904,
+      "ci_upper": 8.73136138441482,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, aggregate frame loss increased by an average of 8.6461 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_utilization_percent",
+      "scope": "aggregate",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -5.328694836832372,
+      "ci_lower": -5.375276525434661,
+      "ci_upper": -5.282113148230083,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, aggregate link utilization decreased by an average of 5.3287 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_queue_delay_ms",
+      "scope": "aggregate",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 10.317419909721245,
+      "ci_lower": 10.310273614319623,
+      "ci_upper": 10.324566205122867,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, aggregate average queueing delay increased by an average of 10.3174 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "utilization_gap_pp",
+      "scope": "system",
+      "label": "Utilization gap",
+      "unit": "percentage points",
+      "mean_difference": 87.5613831019603,
+      "ci_lower": 87.49500666484424,
+      "ci_upper": 87.62775953907637,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, system utilization gap increased by an average of 87.5614 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_max_queue_length",
+      "scope": "link_1",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": 86.9,
+      "ci_lower": 85.97956182559929,
+      "ci_upper": 87.82043817440072,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 1 maximum queue length increased by an average of 86.9000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_max_queue_length",
+      "scope": "link_2",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": -9.4,
+      "ci_lower": -10.3048628,
+      "ci_upper": -8.4951372,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 120 Mbps with a 90/10 distribution, compared with 50/50, link 2 maximum queue length decreased by an average of 9.4000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_throughput_mbps",
+      "scope": "link_1",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": 17.586239999999997,
+      "ci_lower": 17.489088960216023,
+      "ci_upper": 17.68339103978397,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 1 throughput increased by an average of 17.5862 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_delay_ms",
+      "scope": "link_1",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 11.581856679062875,
+      "ci_lower": 11.578543438915968,
+      "ci_upper": 11.585169919209783,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 1 average frame delay increased by an average of 11.5819 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_frame_loss_percent",
+      "scope": "link_1",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 12.829832606210795,
+      "ci_lower": 12.74740880075701,
+      "ci_upper": 12.91225641166458,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 1 frame loss increased by an average of 12.8298 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_utilization_percent",
+      "scope": "link_1",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": 18.031771911448566,
+      "ci_lower": 17.932158742646187,
+      "ci_upper": 18.131385080250944,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 1 link utilization increased by an average of 18.0318 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_queue_delay_ms",
+      "scope": "link_1",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 11.58185667906258,
+      "ci_lower": 11.57854343891572,
+      "ci_upper": 11.585169919209442,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 1 average queueing delay increased by an average of 11.5819 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_throughput_mbps",
+      "scope": "link_2",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -31.953259999999997,
+      "ci_lower": -32.033222919275694,
+      "ci_upper": -31.873297080724296,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 2 throughput decreased by an average of 31.9533 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_delay_ms",
+      "scope": "link_2",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": -0.2207155681660334,
+      "ci_lower": -0.22434072066968905,
+      "ci_upper": -0.21709041566237777,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 2 average frame delay decreased by an average of 0.2207 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_frame_loss_percent",
+      "scope": "link_2",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 2 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_utilization_percent",
+      "scope": "link_2",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -32.76273406539772,
+      "ci_lower": -32.84472730379338,
+      "ci_upper": -32.68074082700207,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 2 link utilization decreased by an average of 32.7627 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_queue_delay_ms",
+      "scope": "link_2",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": -0.22071556816650567,
+      "ci_lower": -0.2243407206701728,
+      "ci_upper": -0.21709041566283854,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 2 average queueing delay decreased by an average of 0.2207 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_throughput_mbps",
+      "scope": "aggregate",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -14.367020000000005,
+      "ci_lower": -14.489317198997657,
+      "ci_upper": -14.244722801002354,
+      "direction": "decrease",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, aggregate throughput decreased by an average of 14.3670 Mbps. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_delay_ms",
+      "scope": "aggregate",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 7.688861290268671,
+      "ci_lower": 7.684840621470931,
+      "ci_upper": 7.69288195906641,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, aggregate average frame delay increased by an average of 7.6889 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_frame_loss_percent",
+      "scope": "aggregate",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 8.978271814211235,
+      "ci_lower": 8.918138452210407,
+      "ci_upper": 9.038405176212063,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, aggregate frame loss increased by an average of 8.9783 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_utilization_percent",
+      "scope": "aggregate",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -7.365481076974578,
+      "ci_lower": -7.428196177319018,
+      "ci_upper": -7.302765976630138,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, aggregate link utilization decreased by an average of 7.3655 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_queue_delay_ms",
+      "scope": "aggregate",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 7.688861290268314,
+      "ci_lower": 7.68484062147054,
+      "ci_upper": 7.692881959066089,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, aggregate average queueing delay increased by an average of 7.6889 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "utilization_gap_pp",
+      "scope": "system",
+      "label": "Utilization gap",
+      "unit": "percentage points",
+      "mean_difference": 50.63160356635292,
+      "ci_lower": 50.522029791250866,
+      "ci_upper": 50.74117734145498,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, system utilization gap increased by an average of 50.6316 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_1_max_queue_length",
+      "scope": "link_1",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": 72.2,
+      "ci_lower": 70.12669886272516,
+      "ci_upper": 74.27330113727484,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 1 maximum queue length increased by an average of 72.2000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "metric": "link_2_max_queue_length",
+      "scope": "link_2",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": -20.6,
+      "ci_lower": -23.82043030765072,
+      "ci_upper": -17.379569692349282,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 70/30 distribution, compared with 50/50, link 2 maximum queue length decreased by an average of 20.6000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_throughput_mbps",
+      "scope": "link_1",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": 17.586779999999997,
+      "ci_lower": 17.48930956199642,
+      "ci_upper": 17.684250438003573,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 1 throughput increased by an average of 17.5868 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_delay_ms",
+      "scope": "link_1",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 11.87461588640999,
+      "ci_lower": 11.872241535288497,
+      "ci_upper": 11.876990237531482,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 1 average frame delay increased by an average of 11.8746 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_frame_loss_percent",
+      "scope": "link_1",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 32.21487951576936,
+      "ci_lower": 32.1701613516184,
+      "ci_upper": 32.259597679920326,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 1 frame loss increased by an average of 32.2149 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_utilization_percent",
+      "scope": "link_1",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": 18.032320401379867,
+      "ci_lower": 17.93236008682002,
+      "ci_upper": 18.132280715939714,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 1 link utilization increased by an average of 18.0323 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_average_queue_delay_ms",
+      "scope": "link_1",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 11.874615886409659,
+      "ci_lower": 11.872241535288069,
+      "ci_upper": 11.876990237531249,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 1 average queueing delay increased by an average of 11.8746 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_throughput_mbps",
+      "scope": "link_2",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -63.939159999999994,
+      "ci_lower": -64.04865086657982,
+      "ci_upper": -63.82966913342017,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 2 throughput decreased by an average of 63.9392 Mbps. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_delay_ms",
+      "scope": "link_2",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": -0.26824895804020865,
+      "ci_lower": -0.27189658248320914,
+      "ci_upper": -0.26460133359720817,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 2 average frame delay decreased by an average of 0.2682 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_frame_loss_percent",
+      "scope": "link_2",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "direction": "no_observed_difference",
+      "impact": "no_observed_difference",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 2 frame loss showed no observed difference across the paired runs."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_utilization_percent",
+      "scope": "link_2",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -65.5589942217077,
+      "ci_lower": -65.67128281786867,
+      "ci_upper": -65.44670562554674,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 2 link utilization decreased by an average of 65.5590 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_average_queue_delay_ms",
+      "scope": "link_2",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": -0.2682489580406832,
+      "ci_lower": -0.27189658248369486,
+      "ci_upper": -0.2646013335976716,
+      "direction": "decrease",
+      "impact": "improvement",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 2 average queueing delay decreased by an average of 0.2682 ms. The confidence interval provides evidence of improvement in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_throughput_mbps",
+      "scope": "aggregate",
+      "label": "Throughput",
+      "unit": "Mbps",
+      "mean_difference": -46.352380000000004,
+      "ci_lower": -46.49000162758747,
+      "ci_upper": -46.21475837241254,
+      "direction": "decrease",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, aggregate throughput decreased by an average of 46.3524 Mbps. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_delay_ms",
+      "scope": "aggregate",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "mean_difference": 10.161080211447388,
+      "ci_lower": 10.157472191695394,
+      "ci_upper": 10.164688231199381,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, aggregate average frame delay increased by an average of 10.1611 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_frame_loss_percent",
+      "scope": "aggregate",
+      "label": "Frame loss",
+      "unit": "percentage points",
+      "mean_difference": 28.987861094985437,
+      "ci_lower": 28.949055678905857,
+      "ci_upper": 29.026666511065017,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, aggregate frame loss increased by an average of 28.9879 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_utilization_percent",
+      "scope": "aggregate",
+      "label": "Link utilization",
+      "unit": "percentage points",
+      "mean_difference": -23.76333691016392,
+      "ci_lower": -23.833915656647456,
+      "ci_upper": -23.69275816368038,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, aggregate link utilization decreased by an average of 23.7633 percentage points. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "aggregate_average_queue_delay_ms",
+      "scope": "aggregate",
+      "label": "Average queueing delay",
+      "unit": "ms",
+      "mean_difference": 10.161080211447032,
+      "ci_lower": 10.157472191694948,
+      "ci_upper": 10.164688231199117,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, aggregate average queueing delay increased by an average of 10.1611 ms. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "utilization_gap_pp",
+      "scope": "system",
+      "label": "Utilization gap",
+      "unit": "percentage points",
+      "mean_difference": 83.42841221259421,
+      "ci_lower": 83.33987822502286,
+      "ci_upper": 83.51694620016556,
+      "direction": "increase",
+      "impact": "degradation",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, system utilization gap increased by an average of 83.4284 percentage points. The confidence interval provides evidence of degradation in this metric."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_1_max_queue_length",
+      "scope": "link_1",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": 72.2,
+      "ci_lower": 70.12669886272516,
+      "ci_upper": 74.27330113727484,
+      "direction": "increase",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 1 maximum queue length increased by an average of 72.2000 frames. The implications of this change depend on the other performance metrics."
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "metric": "link_2_max_queue_length",
+      "scope": "link_2",
+      "label": "Maximum queue length",
+      "unit": "frames",
+      "mean_difference": -25.4,
+      "ci_lower": -28.907761978700066,
+      "ci_upper": -21.89223802129993,
+      "direction": "decrease",
+      "impact": "context_dependent",
+      "statement": "At 160 Mbps with a 90/10 distribution, compared with 50/50, link 2 maximum queue length decreased by an average of 25.4000 frames. The implications of this change depend on the other performance metrics."
+    }
+  ],
+  "configuration_findings": [
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "findings": [
+        {
+          "category": "latency_without_loss",
+          "statement": "Average frame delay increased despite no observed frame loss.",
+          "supporting_metrics": [
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "latency_without_throughput_degradation",
+          "statement": "Average frame delay increased without clear evidence of throughput degradation.",
+          "supporting_metrics": [
+            "aggregate_average_delay_ms",
+            "aggregate_throughput_mbps"
+          ]
+        },
+        {
+          "category": "performance_degradation",
+          "statement": "At least one primary performance metric degraded, with no detected improvement in the other primary metrics.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "no_observed_loss",
+          "statement": "No frame loss was observed in the experimental runs.",
+          "supporting_metrics": [
+            "aggregate_frame_loss_percent"
+          ]
+        }
+      ]
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "findings": [
+        {
+          "category": "latency_without_loss",
+          "statement": "Average frame delay increased despite no observed frame loss.",
+          "supporting_metrics": [
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "latency_without_throughput_degradation",
+          "statement": "Average frame delay increased without clear evidence of throughput degradation.",
+          "supporting_metrics": [
+            "aggregate_average_delay_ms",
+            "aggregate_throughput_mbps"
+          ]
+        },
+        {
+          "category": "performance_degradation",
+          "statement": "At least one primary performance metric degraded, with no detected improvement in the other primary metrics.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "no_observed_loss",
+          "statement": "No frame loss was observed in the experimental runs.",
+          "supporting_metrics": [
+            "aggregate_frame_loss_percent"
+          ]
+        }
+      ]
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "findings": [
+        {
+          "category": "latency_without_loss",
+          "statement": "Average frame delay increased despite no observed frame loss.",
+          "supporting_metrics": [
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "latency_without_throughput_degradation",
+          "statement": "Average frame delay increased without clear evidence of throughput degradation.",
+          "supporting_metrics": [
+            "aggregate_average_delay_ms",
+            "aggregate_throughput_mbps"
+          ]
+        },
+        {
+          "category": "performance_degradation",
+          "statement": "At least one primary performance metric degraded, with no detected improvement in the other primary metrics.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "no_observed_loss",
+          "statement": "No frame loss was observed in the experimental runs.",
+          "supporting_metrics": [
+            "aggregate_frame_loss_percent"
+          ]
+        }
+      ]
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "findings": [
+        {
+          "category": "delivery_degradation",
+          "statement": "Aggregate throughput decreased alongside an increase in frame loss.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "performance_degradation",
+          "statement": "At least one primary performance metric degraded, with no detected improvement in the other primary metrics.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "observed_loss",
+          "statement": "The mean aggregate frame loss was 8.6461%.",
+          "supporting_metrics": [
+            "aggregate_frame_loss_percent"
+          ]
+        }
+      ]
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "baseline_split": 0.5,
+      "findings": [
+        {
+          "category": "delivery_degradation",
+          "statement": "Aggregate throughput decreased alongside an increase in frame loss.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "performance_degradation",
+          "statement": "At least one primary performance metric degraded, with no detected improvement in the other primary metrics.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "observed_loss",
+          "statement": "The mean aggregate frame loss was 8.9783%.",
+          "supporting_metrics": [
+            "aggregate_frame_loss_percent"
+          ]
+        }
+      ]
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "baseline_split": 0.5,
+      "findings": [
+        {
+          "category": "delivery_degradation",
+          "statement": "Aggregate throughput decreased alongside an increase in frame loss.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "performance_degradation",
+          "statement": "At least one primary performance metric degraded, with no detected improvement in the other primary metrics.",
+          "supporting_metrics": [
+            "aggregate_throughput_mbps",
+            "aggregate_average_delay_ms",
+            "aggregate_frame_loss_percent"
+          ]
+        },
+        {
+          "category": "observed_loss",
+          "statement": "The mean aggregate frame loss was 28.9879%.",
+          "supporting_metrics": [
+            "aggregate_frame_loss_percent"
+          ]
+        }
+      ]
+    }
+  ],
+  "capacity_findings": [
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.5,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 40.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 40.95092977485519,
+        "generated": 1996959.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 40.95%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 40.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 41.014878728321165,
+        "generated": 2000078.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 41.01%."
+        ]
+      },
+      "bottleneck": {
+        "category": "no_theoretical_overload",
+        "statement": "Neither link receives offered traffic above its effective capacity. Temporary queue buildup may still occur."
+      }
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.7,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 56.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 57.35312046286026,
+        "generated": 2796805.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 57.35%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 24.000000000000004,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 24.608664300474906,
+        "generated": 1200034.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 24.61%."
+        ]
+      },
+      "bottleneck": {
+        "category": "no_theoretical_overload",
+        "statement": "Neither link receives offered traffic above its effective capacity. Temporary queue buildup may still occur."
+      }
+    },
+    {
+      "total_load_mbps": 80.0,
+      "traffic_split": 0.9,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 72.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 73.78323176388837,
+        "generated": 3598031.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 73.78%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 7.999999999999998,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 8.21343181075927,
+        "generated": 400525.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 8.21%."
+        ]
+      },
+      "bottleneck": {
+        "category": "no_theoretical_overload",
+        "statement": "Neither link receives offered traffic above its effective capacity. Temporary queue buildup may still occur."
+      }
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.5,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 60.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 61.45808166553584,
+        "generated": 2996990.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 61.46%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 60.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 61.52160868092628,
+        "generated": 3000086.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 61.52%."
+        ]
+      },
+      "bottleneck": {
+        "category": "no_theoretical_overload",
+        "statement": "Neither link receives offered traffic above its effective capacity. Temporary queue buildup may still occur."
+      }
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.7,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 84.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 86.06995572258901,
+        "generated": 4197194.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 86.07%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 36.00000000000001,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 36.92193218169922,
+        "generated": 1800489.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 36.92%."
+        ]
+      },
+      "bottleneck": {
+        "category": "no_theoretical_overload",
+        "statement": "Neither link receives offered traffic above its effective capacity. Temporary queue buildup may still occur."
+      }
+    },
+    {
+      "total_load_mbps": 120.0,
+      "traffic_split": 0.9,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 108.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "above_capacity",
+        "utilization_percent": 99.99892187279116,
+        "generated": 5395848.0,
+        "dropped": 518496.0,
+        "findings": [
+          "The offered load of 108.00 Mbps exceeds the effective capacity of 97.53 Mbps. The link is theoretically overloaded.",
+          "Frame loss was observed.",
+          "Mean link utilization was 100.00%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 11.999999999999996,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 12.323378800006228,
+        "generated": 600945.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 12.32%."
+        ]
+      },
+      "bottleneck": {
+        "category": "imbalance_bottleneck",
+        "statement": "Link 1 is overloaded despite the total offered load being below the combined effective capacity. Available capacity on Link 2 cannot be used by the overloaded link under the fixed traffic assignment model."
+      }
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.5,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 80.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 81.96729596838993,
+        "generated": 3997126.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 81.97%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 80.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 81.98520587027703,
+        "generated": 3997990.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 81.99%."
+        ]
+      },
+      "bottleneck": {
+        "category": "no_theoretical_overload",
+        "statement": "Neither link receives offered traffic above its effective capacity. Temporary queue buildup may still occur."
+      }
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.7,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 112.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "above_capacity",
+        "utilization_percent": 99.99906787983849,
+        "generated": 5595266.0,
+        "dropped": 717871.0,
+        "findings": [
+          "The offered load of 112.00 Mbps exceeds the effective capacity of 97.53 Mbps. The link is theoretically overloaded.",
+          "Frame loss was observed.",
+          "Mean link utilization was 100.00%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 48.00000000000001,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 49.222471804879305,
+        "generated": 2400319.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 49.22%."
+        ]
+      },
+      "bottleneck": {
+        "category": "imbalance_bottleneck",
+        "statement": "Link 1 is overloaded despite the total offered load being below the combined effective capacity. Available capacity on Link 2 cannot be used by the overloaded link under the fixed traffic assignment model."
+      }
+    },
+    {
+      "total_load_mbps": 160.0,
+      "traffic_split": 0.9,
+      "combined_effective_capacity_mbps": 195.05851755526658,
+      "link_1": {
+        "offered_load_mbps": 144.0,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "above_capacity",
+        "utilization_percent": 99.9996163697698,
+        "generated": 7195446.0,
+        "dropped": 2318008.0,
+        "findings": [
+          "The offered load of 144.00 Mbps exceeds the effective capacity of 97.53 Mbps. The link is theoretically overloaded.",
+          "Frame loss was observed.",
+          "Mean link utilization was 100.00%."
+        ]
+      },
+      "link_2": {
+        "offered_load_mbps": 15.999999999999996,
+        "effective_capacity_mbps": 97.52925877763329,
+        "capacity_condition": "below_capacity",
+        "utilization_percent": 16.42621164856932,
+        "generated": 801019.0,
+        "dropped": 0.0,
+        "findings": [
+          "The offered load is below the effective capacity of the link.",
+          "No frame loss was observed.",
+          "Mean link utilization was 16.43%."
+        ]
+      },
+      "bottleneck": {
+        "category": "imbalance_bottleneck",
+        "statement": "Link 1 is overloaded despite the total offered load being below the combined effective capacity. Available capacity on Link 2 cannot be used by the overloaded link under the fixed traffic assignment model."
+      }
+    }
+  ],
+  "overall_findings": [
+    {
+      "category": "delivery_degradation",
+      "count": 3,
+      "configurations": [
+        "120 Mbps (90/10)",
+        "160 Mbps (70/30)",
+        "160 Mbps (90/10)"
+      ],
+      "statement": "Reduced throughput alongside increased frame loss was identified in 3 configuration(s): 120 Mbps (90/10), 160 Mbps (70/30), 160 Mbps (90/10)."
+    },
+    {
+      "category": "latency_without_loss",
+      "count": 3,
+      "configurations": [
+        "80 Mbps (70/30)",
+        "80 Mbps (90/10)",
+        "120 Mbps (70/30)"
+      ],
+      "statement": "Increased latency without observed frame loss was identified in 3 configuration(s): 80 Mbps (70/30), 80 Mbps (90/10), 120 Mbps (70/30)."
+    },
+    {
+      "category": "latency_without_throughput_degradation",
+      "count": 3,
+      "configurations": [
+        "80 Mbps (70/30)",
+        "80 Mbps (90/10)",
+        "120 Mbps (70/30)"
+      ],
+      "statement": "Increased latency without clear evidence of throughput degradation was identified in 3 configuration(s): 80 Mbps (70/30), 80 Mbps (90/10), 120 Mbps (70/30)."
+    },
+    {
+      "category": "performance_degradation",
+      "count": 6,
+      "configurations": [
+        "80 Mbps (70/30)",
+        "80 Mbps (90/10)",
+        "120 Mbps (70/30)",
+        "120 Mbps (90/10)",
+        "160 Mbps (70/30)",
+        "160 Mbps (90/10)"
+      ],
+      "statement": "Detected degradation without detected improvement was identified in 6 configuration(s): 80 Mbps (70/30), 80 Mbps (90/10), 120 Mbps (70/30), 120 Mbps (90/10), 160 Mbps (70/30), 160 Mbps (90/10)."
+    },
+    {
+      "category": "imbalance_bottleneck",
+      "count": 3,
+      "configurations": [
+        "120 Mbps (90/10)",
+        "160 Mbps (70/30)",
+        "160 Mbps (90/10)"
+      ],
+      "statement": "Imbalance-induced theoretical overload was identified in 3 configuration(s): 120 Mbps (90/10), 160 Mbps (70/30), 160 Mbps (90/10)."
+    },
+    {
+      "category": "no_theoretical_overload",
+      "count": 6,
+      "configurations": [
+        "80 Mbps (50/50)",
+        "80 Mbps (70/30)",
+        "80 Mbps (90/10)",
+        "120 Mbps (50/50)",
+        "120 Mbps (70/30)",
+        "160 Mbps (50/50)"
+      ],
+      "statement": "No theoretical link overload was identified in 6 configuration(s): 80 Mbps (50/50), 80 Mbps (70/30), 80 Mbps (90/10), 120 Mbps (50/50), 120 Mbps (70/30), 160 Mbps (50/50)."
+    }
+  ],
+  "performance_extremes": [
+    {
+      "total_load_mbps": 80.0,
+      "metric": "aggregate_average_delay_ms",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "minimum_mean": 0.16482691634168867,
+      "minimum_splits": [
+        0.5
+      ],
+      "maximum_mean": 0.2779453176304509,
+      "maximum_splits": [
+        0.9
+      ],
+      "all_equal": false
+    },
+    {
+      "total_load_mbps": 80.0,
+      "metric": "aggregate_frame_loss_percent",
+      "label": "Frame loss",
+      "unit": "%",
+      "minimum_mean": 0.0,
+      "minimum_splits": [
+        0.5,
+        0.7,
+        0.9
+      ],
+      "maximum_mean": 0.0,
+      "maximum_splits": [
+        0.5,
+        0.7,
+        0.9
+      ],
+      "all_equal": true
+    },
+    {
+      "total_load_mbps": 80.0,
+      "metric": "aggregate_throughput_mbps",
+      "label": "Aggregate throughput",
+      "unit": "Mbps",
+      "minimum_mean": 79.93668,
+      "minimum_splits": [
+        0.7
+      ],
+      "maximum_mean": 79.97068,
+      "maximum_splits": [
+        0.9
+      ],
+      "all_equal": false
+    },
+    {
+      "total_load_mbps": 120.0,
+      "metric": "aggregate_average_delay_ms",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "minimum_mean": 0.22017361791085907,
+      "minimum_splits": [
+        0.5
+      ],
+      "maximum_mean": 10.537593527632154,
+      "maximum_splits": [
+        0.9
+      ],
+      "all_equal": false
+    },
+    {
+      "total_load_mbps": 120.0,
+      "metric": "aggregate_frame_loss_percent",
+      "label": "Frame loss",
+      "unit": "%",
+      "minimum_mean": 0.0,
+      "minimum_splits": [
+        0.5,
+        0.7
+      ],
+      "maximum_mean": 8.646074455254862,
+      "maximum_splits": [
+        0.9
+      ],
+      "all_equal": false
+    },
+    {
+      "total_load_mbps": 120.0,
+      "metric": "aggregate_throughput_mbps",
+      "label": "Aggregate throughput",
+      "unit": "Mbps",
+      "minimum_mean": 109.54702,
+      "minimum_splits": [
+        0.9
+      ],
+      "maximum_mean": 119.95292,
+      "maximum_splits": [
+        0.7
+      ],
+      "all_equal": false
+    },
+    {
+      "total_load_mbps": 160.0,
+      "metric": "aggregate_average_delay_ms",
+      "label": "Average frame delay",
+      "unit": "ms",
+      "minimum_mean": 0.40157479191898626,
+      "minimum_splits": [
+        0.5
+      ],
+      "maximum_mean": 10.562655003366375,
+      "maximum_splits": [
+        0.9
+      ],
+      "all_equal": false
+    },
+    {
+      "total_load_mbps": 160.0,
+      "metric": "aggregate_frame_loss_percent",
+      "label": "Frame loss",
+      "unit": "%",
+      "minimum_mean": 0.0,
+      "minimum_splits": [
+        0.5
+      ],
+      "maximum_mean": 28.987861094985437,
+      "maximum_splits": [
+        0.9
+      ],
+      "all_equal": false
+    },
+    {
+      "total_load_mbps": 160.0,
+      "metric": "aggregate_throughput_mbps",
+      "label": "Aggregate throughput",
+      "unit": "Mbps",
+      "minimum_mean": 113.54912,
+      "minimum_splits": [
+        0.9
+      ],
+      "maximum_mean": 159.9015,
+      "maximum_splits": [
+        0.5
+      ],
+      "all_equal": false
+    }
+  ],
+  "limitations": [
+    "The simulation models two independent Ethernet links with fixed traffic assignments.",
+    "Dynamic traffic redistribution and link aggregation hashing are not modeled.",
+    "Results apply to the simulated configurations and may not generalize to physical networks.",
+    "Confidence intervals are individual 95% intervals without adjustment for multiple comparisons.",
+    "Inconclusive comparisons do not establish equivalent performance.",
+    "Theoretical capacity limits do not establish the exact experimental onset of frame loss.",
+    "Performance extremes describe observed means and do not necessarily establish statistically supported differences."
+  ]
+}
