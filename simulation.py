@@ -6,7 +6,6 @@ from collections import deque
 from itertools import count
 import simpy
 
-
 def run_simulation(total_load_mbps=120, traffic_split=0.5,
                    link_capacity_mbps=100, payload_bytes=1500,
                    occupancy_byte_times=1538, buffer_capacity=100,

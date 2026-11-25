@@ -1,5 +1,5 @@
-
 import csv
+from email.mime import message
 import time
 from pathlib import Path
 from itertools import product
@@ -8,8 +8,7 @@ from config import LOADS, SPLITS, SEEDS, DEFAULTS
 from simulation import run_simulation
 from metrics import calculate_metrics
 
-
-def run_experiments(loads=LOADS, splits=SPLITS, seeds=SEEDS, settings=None):
+def run_experiments(loads=LOADS, splits=SPLITS, seeds=SEEDS, settings=None, progress_callback=None):
     if settings is None:
         settings = DEFAULTS.copy()
 
@@ -28,10 +27,20 @@ def run_experiments(loads=LOADS, splits=SPLITS, seeds=SEEDS, settings=None):
             f"{(1 - split) * 100:.0f} | "
             f"Seed: {seed}",
             flush=True)
+        if progress_callback: #added to allow for progress updates in a GUI or other interface
+            progress_callback(run_number - 1, total_runs, message)
+            
+        run_start = time.perf_counter()
 
         #execute simulation without storing individual frame records and periodic queue sampling to reduce memory usage and speed up execution
         raw = run_simulation(total_load_mbps=load, traffic_split=split, seed=seed, record_limit=0, queue_sample_interval=None, **settings)
 
+        run_elapsed = time.perf_counter() - run_start
+
+        print(
+             f"    Simulation execution time: {run_elapsed:.2f} seconds",
+            flush=True)
+        
         #performance metrics
         metrics = calculate_metrics(raw)
 
@@ -41,6 +50,7 @@ def run_experiments(loads=LOADS, splits=SPLITS, seeds=SEEDS, settings=None):
             "traffic_split": split,
             "seed": seed,
             "duration_seconds": raw["observation_duration"],
+            "drain_duration_seconds": raw["drain_duration"],
             "link_1_offered_load_mbps": raw["link_1"]["offered_load_mbps"],
             "link_2_offered_load_mbps": raw["link_2"]["offered_load_mbps"]}
 
@@ -60,6 +70,8 @@ def run_experiments(loads=LOADS, splits=SPLITS, seeds=SEEDS, settings=None):
         row["link_2_max_queue_length"] = (raw["link_2"]["max_queue_length"])
 
         results.append(row)
+        if progress_callback:
+            progress_callback(run_number, total_runs, f"Completed seed {seed}")
 
     elapsed = time.perf_counter() - start_time
 
@@ -67,7 +79,6 @@ def run_experiments(loads=LOADS, splits=SPLITS, seeds=SEEDS, settings=None):
     print(f"Execution time: {elapsed:.2f} seconds")
 
     return results
-
 
 def export_results(results, filename):
     if not results:
@@ -83,7 +94,6 @@ def export_results(results, filename):
         writer.writerows(results)
 
     print(f"Results saved to: {path}")
-
 
 def main():
 
