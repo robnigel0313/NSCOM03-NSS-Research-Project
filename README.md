@@ -14,6 +14,8 @@ python -m pip install -r requirements.txt
 python -m unittest discover -s tests -v
 python demo.py --load 120 --split 0.9 --seed 1
 ```
+## Run
+python -m streamlit run main.py
 
 For a full frame export add `--all-frames`. Default export retains the first 10,000 arrivals only; counters always cover the entire run. For batch experiments use `record_limit=0, queue_sample_interval=None` to avoid unnecessary memory usage. No GUI or statistical runner is included in this engine package.
 
