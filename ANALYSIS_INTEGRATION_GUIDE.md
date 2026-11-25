@@ -164,6 +164,8 @@ Recommended use: confidence interval plots and statistical comparisons.
 
 ## 5. Automated Report Generation
 
+Automated report generation is an optional feature. The simulation, performance metrics, experimental runs, and statistical analysis modules operate independently of the report generator. The GUI may provide an optional report generation button for users who wish to obtain automated interpretations of the experimental results. Report generation is not required to access statistical results or visualizations.
+
 The report generator reads the experimental and statistical CSV files, interprets the results using predefined rules, and produces structured findings.
 
 To generate the report:
